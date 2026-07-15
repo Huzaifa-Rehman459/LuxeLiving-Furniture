@@ -18,6 +18,7 @@ body{
     --callBtn-color: #edebb043;
     --section2-color: #FAFAF9;
     --footer-color: #1C1917;
+    --footer-tag-color: #D6D3D1;
 }
 .navbar{
     height: 12vh;
@@ -240,11 +241,15 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 .sales-right .sales-cards{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 25vh;
     width: 35vh;
+    gap: 5vh;
 }
 .sales-cards .sales-card{
     display: flex;
@@ -343,24 +348,31 @@ body{
     height: 70vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     padding: 0 5vh;
 }
 .category-box .category-cards{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    gap: 2vh;
+    gap: 4vh;
 }
 .category-cards span{
     font-weight: 600;
     font-size: 3.5vh;
 }
 .category-cards .category-card{
-    height: 35vh;
-    width: 35vh;
+    height: 33vh;
+    width: 33vh;
     border-radius: 50%;
     background-color: #FFFFFF;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.category-card:hover{
+    transform: scale(1.08);
 }
 .category-card img{
     border-radius: 50%;
@@ -431,7 +443,7 @@ body{
 }
 
 .furniture-cards .furniture-card {
-    height: 70vh;
+    height: 73vh;
     width: 20%;
     border-radius: 15px;
     background-color: #FFFFFF;
@@ -522,7 +534,7 @@ body{
 .furniture-text p {
     font-weight: 600;
     color: black;
-    font-size: 16px;
+    font-size: 13px;
     text-transform: capitalize;
 }
 
@@ -632,4 +644,142 @@ body{
     object-fit: cover;
     object-position: center;
     border-radius: 15px;
+}
+/* FOOTER STYLEING */
+footer{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--footer-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 5vh;
+    position: relative;
+}
+footer .address-box{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 5vh;
+}
+.address-box .address-info{
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+.address-info i{
+    font-size: 45px;
+    color: var(--span-color);
+}
+.address-info h1{
+    font-size: 30px;
+    color: #fff;
+}
+.address-info h1 span{
+    color: var(--span-color);
+}
+.address-box p{
+    color: #A8A29E;
+    font-size: 14px;
+    line-height: 4vh;
+}
+.address-box .icons{
+    display: flex;
+    gap: 3vh;
+}
+.icons i{
+    padding: 1vh 2vh;
+    background-color: #292524;
+    color: white;
+    font-size: 18px;
+    transition: all .5s ease-in-out;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icons i:hover{
+    background-color: var(--span-color);
+}
+footer .links-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 6vh;
+}
+.links-box h2{
+    color: var(--section2-color);
+}
+.links-box ul{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+.links-box ul a{
+    text-decoration: none;
+    color: var(--footer-tag-color);
+    font-size: 14px;
+    transition: all .5s ease-in-out;
+}
+.links-box ul a:hover{
+    color: var(--span-color);
+}
+footer .category-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 6vh;
+}
+.category-box h2{
+    color: var(--section2-color);
+}
+.category-box ul{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+.category-box ul a{
+    text-decoration: none;
+    color: var(--footer-tag-color);
+    font-size: 14px;
+    transition: all .5s ease-in-out;
+}
+.category-box ul a:hover{
+    color: var(--span-color);
+}
+footer .contact-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 6vh;
+}
+.contact-box h2{
+    color: var(--section2-color);
+}
+.contact-box .contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+.contact-box p{
+    display: flex;
+    align-items: flex-start;
+    gap: 3vh;
+    color: var(--footer-tag-color);
+    font-size: 14px;
+    line-height: 4vh;
+}
+.contact-box i{
+    color: var(--span-color);
+    font-size: 4vh;
+}
+footer .copyright{
+    color: var(--footer-tag-color);
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 7vh;
+    border-top: 1px solid #322e2bfb;
+    transform: translateX(50%);
+    right: 50%;
 }
