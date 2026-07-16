@@ -2,6 +2,10 @@ const saleCards = document.querySelector(".sales-cards");
 const salesRight = document.querySelector(".sales-right");
 const categoryContainer = document.querySelector(".category-cards");
 const furnitureContainer = document.querySelector(".furniture-cards");
+const furnitureBtn = document.querySelector(".furnitureBtn");
+const exploreBtn = document.querySelector(".exploreBtn");
+const customBtn = document.querySelector(".customBtn");
+const orderBtn = document.querySelector(".orderBtn");
 
 const saleProducts = [
     {
@@ -209,3 +213,19 @@ function furnitureProduct(){
 });
 }
 furnitureProduct();
+
+function buttonClick(){
+    exploreBtn.addEventListener("click", () =>{
+    window.location.href = "Page2.html";
+})
+customBtn.addEventListener("click", () =>{
+    window.location.href = "contact.html";
+})
+orderBtn.addEventListener("click", () =>{
+    window.location.href = "contact.html";
+})
+furnitureBtn.addEventListener("click", () =>{
+    window.location.href = "Page2.html";
+})
+}
+buttonClick();

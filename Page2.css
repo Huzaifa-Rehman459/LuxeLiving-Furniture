@@ -439,3 +439,126 @@ footer .copyright{
     transform: translateX(50%);
     right: 50%;
 }
+@media (max-width: 1024px){
+
+    .navbar{
+        padding: 2vh 3vh;
+    }
+    .center-nav ul{
+        gap: 4vh;
+    }
+    .left-nav .left-sub{
+        gap: 3vh;
+    }
+
+    .furniture-header h1{
+        font-size: 6vh;
+    }
+    .furniture-header input{
+        width: 60%;
+    }
+    .furniture-header .input-wrapper{
+        padding: 6vh 4vh;
+    }
+
+    .furniture-cards .furniture-card{
+        height: 60vh;
+    }
+    .furniture-card .furniture-img{
+        height: 36vh;
+    }
+
+    footer{
+        padding: 4vh;
+    }
+    footer .category-box{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .navbar{
+        height: auto;
+        flex-wrap: wrap;
+        padding: 2vh;
+    }
+    .navbar .center-nav{
+        display: none;
+    }
+    .navbar .right-nav{
+        width: 50%;
+    }
+    .navbar .left-nav{
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .left-sub .callBtn span{
+        display: none; /* keep icon only if button has a text span, adjust if not applicable */
+    }
+    footer{
+        height: auto;
+        width: 100%;
+        padding: 0 4vh 15vh 4vh;
+    }
+    .address-info h1{
+        font-size: 2vh;
+    }
+    .address-info i{
+        font-size: 3vh;
+    }
+    .address-box p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .icons i{
+        font-size: 12px;
+        padding: 1vh;
+    }
+    footer .category-box{
+        display: none;
+    }
+    .links-box{
+        font-size: 12px;
+    }
+    .links-box ul{
+        gap: 2vh;
+    }
+    .links-box ul a{
+        font-size: 10px;
+    }
+    .contact-box{
+        font-size: 12px;
+    }
+    .contact-box p{
+        width: 100%;
+        line-height: normal;
+        font-size: 10px;
+    }
+    .contact-box i{
+        font-size: 17px;
+    }
+    .contact-box .contact-info{
+        gap: 2vh;
+    }
+    footer .copyright{
+        width: 100%;
+        margin-top: 2vh;
+        padding: 5vh;
+    }
+}
+@media (max-width: 480px){
+    .navbar .left-sub i{
+        font-size: 18px;
+    }
+    .left-sub .callBtn{
+        padding: 1.5vh 2.5vh;
+    }
+    .input-wrapper h1{
+        font-size: 5vh;
+    }
+    .input-wrapper input{
+        width: 100%;
+    }
+    footer{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

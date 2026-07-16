@@ -304,7 +304,7 @@ body{
 .category-section{
     height: 100vh;
     width: 100%;
-    background-color: #f3e6e69e;
+    background-color: #c5c5c528;
 }
 .category-section .category-text{
     display: flex;
@@ -623,6 +623,7 @@ body{
     font-weight: 600;
     font-size: 15px;
     border-radius: 10px;
+    cursor: pointer;
     transition: all .5s ease-in-out;
 }
 .left-project .orderBtn:hover{
@@ -781,4 +782,329 @@ footer .copyright{
     border-top: 1px solid #322e2bfb;
     transform: translateX(50%);
     right: 50%;
+}
+/* ---------- TABLETS (<=1024px) ---------- */
+@media (max-width: 1024px){
+ 
+    /* Navbar: tighten spacing, shrink nav link gaps */
+    .navbar{
+        padding: 2vh 3vh;
+    }
+    .center-nav ul{
+        gap: 4vh;
+    }
+    .left-nav .left-sub{
+        gap: 3vh;
+    }
+ 
+    /* Hero: text needs more room on narrower screens */
+    .hero-text h1{
+        font-size: 9vh;
+    }
+    .hero-text p{
+        max-width: 70%;
+        font-size: 17px;
+        line-height: 4vh;
+    }
+ 
+    /* Sales box: shrink right side cards a bit */
+    .sales-box h1{
+        font-size: 5vh;
+    }
+ 
+    /* Category cards: shrink circles so 5 still roughly fit */
+    .category-cards .category-card{
+        height: 24vh;
+        width: 24vh;
+    }
+    .category-text h2{
+        font-size: 5vh;
+    }
+ 
+    /* Furniture cards: 3 per row instead of 5 */
+    .furniture-cards .furniture-card{
+        width: 31%;
+    }
+ 
+    /* Custom project heading scales down */
+    .left-project h1{
+        font-size: 6vh;
+    }
+    .right-project img{
+        height: 30vh;
+        width: 32vh;
+    }
+}
+ 
+/* ---------- SMALL TABLETS / LARGE PHONES (<=768px) ---------- */
+@media (max-width: 768px){
+ 
+    /* Navbar: hide center nav links, keep logo + call button visible */
+    .navbar{
+        height: auto;
+        flex-wrap: wrap;
+        padding: 2vh;
+    }
+    .navbar .center-nav{
+        display: none;
+    }
+    .navbar .right-nav{
+        width: 50%;
+    }
+    .navbar .left-nav{
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .left-sub .callBtn span{
+        display: none; /* keep icon only if button has a text span, adjust if not applicable */
+    }
+    /* Hero */
+    .hero-section{
+        height: 100vh;
+        padding: 25vh 3vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .hero-text h1{
+        font-size: 6vh;
+    }
+    .hero-text p{
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 3.2vh;
+    }
+    .hero-section .hero-buttons{
+        flex-wrap: wrap;
+        margin-top: 4vh;
+    }
+ 
+    /* Sales section: stack left/right */
+    .sales-section{
+        height: auto;
+        padding: 4vh 3vh;
+    }
+    .sales-section .sales-box{
+        height: auto;
+        flex-direction: column;
+    }
+    .sales-box p{
+        font-size: 17px;
+    }
+    .sales-box .sales-left,
+    .sales-box .sales-right{
+        width: 100%;
+    }
+    .sales-box .sales-left{
+        padding: 4vh;
+    }
+    .sales-box .sales-right{
+        padding: 0 4vh 4vh;
+    }
+    .sales-right .sales-card{
+        width: 80%;
+    }
+ 
+    /* Category section */
+    .category-section{
+        height: auto;
+        padding-bottom: 4vh;
+    }
+    .category-section .category-text{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2vh;
+    }
+    .category-section .category-box{
+        height: auto;
+        padding: 3vh;
+    }
+    .category-box .category-cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .category-cards .category-card{
+        height: 20vh;
+        width: 20vh;
+    }
+    .category-cards span{
+        font-size: 18px;
+    }
+ 
+    /* Furniture: 2 per row */
+    .furniture-collection{
+        height: auto;
+    }
+    .furniture-collection .furniture-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3vh;
+        padding: 4vh;
+    }
+    .furniture-header .furnitureBtn{
+        padding: 2vh 2vh;
+    }
+    .left-header h1{
+        font-size: 6vh;
+    }
+    .furniture-collection .furniture-cards{
+        height: auto;
+        padding: 2vh;
+    }
+    .furniture-cards .furniture-card{
+        width: 47%;
+        height: 50vh;
+    }
+    .furniture-card .furniture-img{
+        height: 32vh;
+    }
+ 
+    /* Custom project: stack columns */
+    .custom-project{
+        height: auto;
+        padding: 3vh;
+    }
+    .custom-project .project-box{
+        height: auto;
+        flex-direction: row;
+    }
+    .project-box .left-project{
+        width: 100%;
+        padding: 5vh;
+    }
+    .project-box .right-project{
+        width: 100%;
+        padding: 5vh;
+    }
+    .left-project h1{
+        font-size: 3vh;
+    }
+    .left-project p{
+        width: 100%;
+    }
+    .left-project .orderBtn{
+        padding: 2vh 2vh;
+    }
+    .right-project img{
+        height: 10vh;
+        width: 100%;
+    }
+ 
+    /* Footer */
+    footer{
+        height: auto;
+        width: 100%;
+        padding: 0 4vh 15vh 4vh;
+    }
+    .address-info h1{
+        font-size: 2vh;
+    }
+    .address-info i{
+        font-size: 3vh;
+    }
+    .address-box p{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .icons i{
+        font-size: 12px;
+        padding: 1vh;
+    }
+    footer .category-box{
+        display: none;
+    }
+    .links-box{
+        font-size: 12px;
+    }
+    .links-box ul{
+        gap: 2vh;
+    }
+    .links-box ul a{
+        font-size: 10px;
+    }
+    .contact-box{
+        font-size: 12px;
+    }
+    .contact-box p{
+        width: 100%;
+        line-height: normal;
+        font-size: 10px;
+    }
+    .contact-box i{
+        font-size: 17px;
+    }
+    .contact-box .contact-info{
+        gap: 2vh;
+    }
+    footer .copyright{
+        width: 100%;
+        margin-top: 2vh;
+        padding: 5vh;
+    }
+}
+ 
+/* ---------- PHONES (<=480px) ---------- */
+@media (max-width: 480px){
+ 
+    .navbar .left-sub i{
+        font-size: 18px;
+    }
+    .left-sub .callBtn{
+        padding: 1.5vh 2.5vh;
+    }
+ 
+    .hero-text h1{
+        font-size: 4.5vh;
+    }
+    .hero-section .hero-buttons button{
+        padding: 2vh 3vh;
+        font-size: 13px;
+    }
+ 
+    .sales-box h1{
+        font-size: 3.5vh;
+    }
+    .sales-cards .sales-card{
+        flex-direction: column;
+        text-align: center;
+        gap: 1vh;
+    }
+    .sales-card-text h5{
+        font-size: 2.5vh;
+    }
+ 
+    .category-text h2{
+        font-size: 3.5vh;
+    }
+    .category-cards .category-card{
+        height: 15vh;
+        width: 15vh;
+    }
+    .category-cards span{
+        font-size: 2vh;
+    }
+ 
+    .left-header h1{
+        font-size: 4vh;
+    }
+    .furniture-cards .furniture-card{
+        width: 100%;
+        height: 65vh;
+    }
+    .furniture-card .furniture-img{
+        height: 38vh;
+    }
+ 
+    .left-project h1{
+        font-size: 3.5vh;
+    }
+    .right-project img{
+        width: 100%;
+        height: 22vh;
+    }
+ 
+    footer{
+        grid-template-columns: 1fr;
+    }
 }
